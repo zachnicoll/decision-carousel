@@ -57,6 +57,9 @@
 	};
 
 	const handleMouseDown = (event: MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+
 		isDragging = true;
 	};
 
@@ -65,6 +68,9 @@
 	};
 
 	const handleDrag = (event: MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+    
 		const deltaY = event.screenY - lastScreenY;
 		lastScreenY = event.screenY;
 
